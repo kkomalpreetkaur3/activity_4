@@ -81,3 +81,14 @@ class ContactList(QMainWindow):
         container = QWidget()
         container.setLayout(layout)
         self.setCentralWidget(container)
+
+@Slot()
+def __remove_contact(self):
+    row = self.contact_table.currentRow()
+    if row == -1:
+        self.status_label.setText("Error: No contact selected to remove.")
+        return
+
+    removed_contact = self.__contacts.pop(row)
+    self.contact_table.removeRow(row)
+    self.status_label.setText(f"Removed contact: {removed_contact[0]}")
