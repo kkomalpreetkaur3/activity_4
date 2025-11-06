@@ -21,6 +21,11 @@ class ContactList(QMainWindow):
         self.phone_input = QLineEdit()
         self.phone_input.setPlaceholderText("Phone Number")
 
+        self.add_button = QPushButton("Add Contact")
+        self.remove_button = QPushButton("Remove Contact")
+        layout.addWidget(self.add_button)
+        layout.addWidget(self.remove_button)
+
         container = QWidget()
         layout = QVBoxLayout()
         layout.addWidget(self.contact_name_input)
