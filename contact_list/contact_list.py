@@ -31,6 +31,9 @@ class ContactList(QMainWindow):
         self.contact_table.setHorizontalHeaderLabels(["Name", "Phone"])
         layout.addWidget(self.contact_table)
 
+        self.status_label = QLabel()
+        layout.addWidget(self.status_label)
+
         container = QWidget()
         layout = QVBoxLayout()
         layout.addWidget(self.contact_name_input)
