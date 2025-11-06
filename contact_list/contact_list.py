@@ -13,8 +13,18 @@ class ContactList(QMainWindow):
         """Initializes a new instance of the ContactList class."""
         super().__init__()
         self.setWindowTitle("Contact List")
+
+        # Input fields
+        self.contact_name_input = QLineEdit()
+        self.contact_name_input.setPlaceholderText("Contact Name")
+
+        self.phone_input = QLineEdit()
+        self.phone_input.setPlaceholderText("Phone Number")
+
         container = QWidget()
         layout = QVBoxLayout()
+        layout.addWidget(self.contact_name_input)
+        layout.addWidget(self.phone_input)
         container.setLayout(layout)
         self.setCentralWidget(container)
         self.__initialize_widgets()      
