@@ -26,6 +26,11 @@ class ContactList(QMainWindow):
         layout.addWidget(self.add_button)
         layout.addWidget(self.remove_button)
 
+        self.contact_table = QTableWidget()
+        self.contact_table.setColumnCount(2)
+        self.contact_table.setHorizontalHeaderLabels(["Name", "Phone"])
+        layout.addWidget(self.contact_table)
+
         container = QWidget()
         layout = QVBoxLayout()
         layout.addWidget(self.contact_name_input)
