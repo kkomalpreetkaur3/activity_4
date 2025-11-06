@@ -1,6 +1,6 @@
 """The module defines the ContactList class."""
 
-__author__ = "ACE Faculty"
+__author__ = "Komalpreet Kaur"
 __version__ = "1.0.0"
 __credits__ = ""
 
@@ -11,8 +11,12 @@ class ContactList(QMainWindow):
 
     def __init__(self):
         """Initializes a new instance of the ContactList class."""
-
         super().__init__()
+        self.setWindowTitle("Contact List")
+        container = QWidget()
+        layout = QVBoxLayout()
+        container.setLayout(layout)
+        self.setCentralWidget(container)
         self.__initialize_widgets()      
 
     def __initialize_widgets(self):
