@@ -40,7 +40,11 @@ class ContactList(QMainWindow):
         layout.addWidget(self.phone_input)
         container.setLayout(layout)
         self.setCentralWidget(container)
-        self.__initialize_widgets()      
+        self.__initialize_widgets()    
+
+        self.add_button.clicked.connect(self.__add_contact)
+        self.remove_button.clicked.connect(self.__remove_contact)
+        self.contact_table.cellClicked.connect(self.__on_select_contact)  
 
     def __initialize_widgets(self):
         """Initializes the widgets on this Window.
