@@ -92,3 +92,12 @@ def __remove_contact(self):
     removed_contact = self.__contacts.pop(row)
     self.contact_table.removeRow(row)
     self.status_label.setText(f"Removed contact: {removed_contact[0]}")
+
+@Slot(int, int)
+def __on_select_contact(self, row: int, column: int):
+    name_item = self.contact_table.item(row, 0)
+    phone_item = self.contact_table.item(row, 1)
+    if name_item and phone_item:
+        self.contact_name_input.setText(name_item.text())
+        self.phone_input.setText(phone_item.text())
+        self.status_label.setText(f"Selected contact: {name_item.text()}")
