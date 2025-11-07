@@ -13,4 +13,15 @@ Komalpreet Kaur
 
 ## Additional Information
 
-[ Use this space to include additional information that may help in your learning. ]
+Below are the 3 components that are implemented in this activity:
+
+### Signals and Slots 
+   - Connected button `clicked` signals to private slot methods (`__on_add_contact`, `__on_remove_contact`).
+
+### Event Handling
+   - Implemented event-driven responses where the program reacts to user actions such as adding, selecting, and removing contacts.
+
+### QMessageBox for User Confirmation
+   - Used a `QMessageBox.question()` dialog to confirm contact removal before processing the event.
+
+
